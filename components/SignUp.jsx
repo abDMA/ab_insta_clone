@@ -18,7 +18,7 @@ const SignUp = () => {
   const [spin, setSpin] = useState(false)
   const FacebookignHandler = () =>{
     setSpin(true)
-    signIn('facebook')then(() =>setSpin(false))
+    signIn('facebook').then(() =>setSpin(false))
   
   
   }
