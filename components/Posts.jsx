@@ -6,9 +6,10 @@ import { useSession } from "next-auth/react"
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore"
 import { EmailState, NameState, ProfilState, UserName, userUid } from "./RecoilState"
 import { useRecoilState } from "recoil"
-import any from "../public/any.png"
+
 
 const Posts = () => {
+  const any = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
   const {data:session} = useSession()
   const [posts, setPosts] = useState([])
   const UserUid = useRecoilState(userUid)
