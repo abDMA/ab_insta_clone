@@ -11,10 +11,11 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useRouter } from 'next/navigation';
 import { signOut as signOUT } from 'next-auth/react';
-import any from "../public/any.png"
+
 
 
 const EditProfile = ({props}) => {
+   const any = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
    const {data:session} = useSession();
    const router = useRouter();
    const ProviderId = session?.user?.id;
