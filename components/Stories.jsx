@@ -11,11 +11,12 @@ import { useRecoilState } from 'recoil';
 import StoriesLoading from './StoriesLoading';
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import any from "../public/any.png";
+
 
 
 
 const Stories = () => {
+  const any = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
   const userName = useRecoilState(UserName);
   const profileImg = useRecoilState(ProfilState)
   const [results, setResults] = useState([])
