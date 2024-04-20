@@ -11,8 +11,9 @@ import { signOut as signOUT } from 'next-auth/react'
 import {MiniProfilLoading} from '@/components/constant'
 import Skeleton from 'react-loading-skeleton'
 import 'react-loading-skeleton/dist/skeleton.css'
-import any from "../public/any.png"
+
 const MiniProfile = () => {
+  const any = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
   const {data:session} = useSession()
   const [results, setResults] = useState([])
   const userName = useRecoilState(UserName);
