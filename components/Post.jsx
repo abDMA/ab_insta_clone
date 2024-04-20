@@ -71,7 +71,7 @@ await setDoc(docRef, {
         {/* -------------------- top post ----------------- */}
         <div className='px-5 py-4'>
           <div className='flex items-center gap-3 float-left '>
-          <img src={profileImg} alt="userImg" className='w-8 h-8 rounded-full' />
+          <img src={profileImg ? profileImg :photoUrl} alt="userImg" className='w-8 h-8 rounded-full' />
           <p className='font-bold text-sm'>{username}</p>
           </div>
           <div className='float-right mt-2 cursor-pointer'><BsThreeDots  /></div>
@@ -110,7 +110,7 @@ await setDoc(docRef, {
           <div className='h-[90px] overflow-y-auto'>
            { postedComment.length > 0 &&  postedComment.map((commented,i)=>(
                <div key={i+1}  className='flex items-center gap-2 mt-3 px-7' >
-                 <img src={commented?.data()?.PostImage} alt="image" className='w-8 h-8 rounded-full' />
+                 <img src={commented?.data()?.PostImage ? commented?.data()?.PostImage : photoUrl} alt="image" className='w-8 h-8 rounded-full' />
                  <div className='flex w-full justify-between items-center'>
                 <div className='flex items-center gap-1'>
                 <p className='font-bold text-xs w-15 truncate'>{commented?.data()?.Username}</p>
