@@ -18,7 +18,7 @@ import { signOut } from 'firebase/auth'
 import { auth, db, storage } from '@/app/firebase'
 import { addDoc, arrayUnion, collection, doc, serverTimestamp, setDoc, updateDoc } from 'firebase/firestore'
 import { getDownloadURL, ref, uploadString } from 'firebase/storage'
-import any from "../public/any.png"
+
 
 
 
@@ -26,6 +26,7 @@ import any from "../public/any.png"
 
 
 const  NavBar = ( {}) => {
+  const any = 'https://www.refugee-action.org.uk/wp-content/uploads/2016/10/anonymous-user.png'
   const {data:session} = useSession() 
   const profileImg = useRecoilState(ProfilState)
   const [menu, setMenu] = useState(false)
