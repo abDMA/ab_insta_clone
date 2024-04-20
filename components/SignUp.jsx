@@ -17,8 +17,9 @@ import { Password } from './RecoilState';
 const SignUp = () => {
   const [spin, setSpin] = useState(false)
   const FacebookignHandler = () =>{
-    signIn('facebook')
     setSpin(true)
+    signIn('facebook')then(() =>setSpin(false))
+  
   
   }
   const {data:session,status} = useSession()
