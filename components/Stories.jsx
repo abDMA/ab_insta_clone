@@ -73,18 +73,18 @@ const Stories = () => {
         modules={[Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide className='ml-2 py-1'>
+        <SwiperSlide className='ml-2 py-1 flex flex-col'>
          {userName[0] ?  <img src={profileImg[0] ? profileImg[0] : any} alt="profile" className='w-40 h-40 p-[2px] rounded-full border-red-600 border border-solid hover:scale-105 duration-150 ease-out ' /> : <Skeleton circle width={50} height={50} borderRadius={100}/>}
           {userName[0] ? <p className='truncate  w-14'>{userName[0]}</p> : <Skeleton width={20} height={4}/>}
         </SwiperSlide>
          {results?.map((result,i)=>( 
         <>
          {
-          <SwiperSlide key={i +1}  className='py-1'>
+          <SwiperSlide key={i +1}  className='py-1  flex flex-col'>
             
           <img  src={result?.picture?.large} alt="images" className='w-40 h-40 p-[2px] border-solid rounded-full border-red-600 border hover:scale-105 duration-150 ease-out' />
 
-          
+        
           <p className='truncate  w-14'>{`${result?.name?.first} ${result?.name?.first} `}</p>
           </SwiperSlide>
          }
